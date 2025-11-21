@@ -312,11 +312,9 @@ func (m *XRPLMonitor) detectAnomaly(metrics *TransactionMetrics) (float64, bool,
 - Increase window_size for better training data
 - Check feature normalization parameters
 
-# License
 
-MIT License - Feel free to use and modify for your needs.
 
-# Contributing
+# roadmap
 
 Contributions welcome! Areas for improvement:
 - Additional anomaly detection algorithms
@@ -324,3 +322,4 @@ Contributions welcome! Areas for improvement:
 - Real-time visualization dashboard
 - Integration with alerting systems (email, Slack, etc.)
 - Support for historical data analysis
+
