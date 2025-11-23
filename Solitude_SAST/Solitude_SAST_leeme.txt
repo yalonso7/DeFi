@@ -1,0 +1,174 @@
+I'll help you build a SAST (Static Application Security Testing) tool for Solidity smart contracts that checks for OWASP Smart Contract Top 10 vulnerabilities. Let me create a comprehensive Python tool for you.​​​​​​​​​​​​​​​​
+
+I've created a comprehensive SAST tool for Solidity smart contracts that targets the OWASP Smart Contract Top 10 vulnerabilities. Here's what the tool includes:
+
+## Key Features:
+
+1. *OWASP Smart Contract Top 10 Coverage*:
+   - SC01: Reentrancy attacks
+   - SC02: Integer overflow/underflow
+   - SC03: Unsafe external calls
+   - SC04: Access control issues
+   - SC05: Denial of Service (DoS)
+   - SC06: Bad randomness
+   - SC07: Front-running vulnerabilities
+   - SC08: Time manipulation
+   - SC09: Unchecked return values
+   - SC10: Short address attacks
+
+2. *Analysis Capabilities*:
+   - Pattern-based detection using regex
+   - Context-aware analysis
+   - Function and modifier extraction
+   - State variable analysis
+   - Severity classification (Critical, High, Medium, Low, Info)
+
+3. *Reporting Features*:
+   - Text and JSON output formats
+   - Detailed vulnerability descriptions
+   - Remediation recommendations
+   - Line-by-line analysis
+   - OWASP category mapping
+
+## Usage Examples:
+
+bash
+# Scan a single file
+python sast_tool.py contract.sol
+
+# Scan entire directory
+python sast_tool.py ./contracts/
+
+# Generate JSON report
+python sast_tool.py contract.sol --format json --output report.json
+
+# Verbose output
+python sast_tool.py ./contracts/ --verbose
+
+
+## Key Components:
+
+- *SolidityParser*: Extracts functions, modifiers, and state variables
+- *VulnerabilityDetector*: Core detection engine with rule-based analysis
+- *ReportGenerator*: Creates formatted reports
+- *Finding*: Data structure for vulnerability information
+
+The tool can be extended with additional rules, improved parsing logic, and integration with other security tools. Would you like me to enhance any specific aspect or add additional vulnerability detection patterns?
+
+
+
+I'll help you understand how to run the `SAST_snake.py` tool from the command line. Let me first examine the file to understand its structure and command-line interface.
+
+
+[1 tool called]
+
+Based on the code analysis, here are examples of how to run the `SAST_snake.py` tool from the command line:
+
+## Basic Usage Examples
+
+### 1. Scan a single Solidity file
+```bash
+python SAST_snake.py CollateralGuard.sol
+```
+
+### 2. Scan a directory containing Solidity files
+```bash
+python SAST_snake.py .
+```
+
+### 3. Scan with verbose output
+```bash
+python SAST_snake.py CollateralGuard.sol --verbose
+```
+
+### 4. Generate JSON report
+```bash
+python SAST_snake.py CollateralGuard.sol --format json
+```
+
+### 5. Save report to a file
+```bash
+python SAST_snake.py CollateralGuard.sol --output security_report.txt
+```
+
+### 6. Generate JSON report and save to file
+```bash
+python SAST_snake.py . --format json --output security_analysis.json
+```
+
+### 7. Scan specific directory with verbose output and save report
+```bash
+python SAST_snake.py ./contracts --verbose --output detailed_report.txt
+```
+
+## Command Line Arguments
+
+The tool accepts the following arguments:
+
+- **`target`** (required): File or directory to scan
+- **`--output` or `-o`**: Output file for the report
+- **`--format` or `-f`**: Output format - either `text` (default) or `json`
+- **`--verbose` or `-v`**: Enable verbose output
+
+## What the Tool Does
+
+The `SAST_snake.py` tool is a Static Application Security Testing (SAST) tool specifically designed for Solidity smart contracts. It:
+
+1. **Scans for OWASP Smart Contract Top 10 vulnerabilities** including:
+   - Reentrancy (SC01)
+   - Integer Overflow/Underflow (SC02)
+   - Unsafe External Calls (SC03)
+   - Access Control Issues (SC04)
+   - Denial of Service (SC05)
+   - Bad Randomness (SC06)
+   - Front-Running (SC07)
+   - Time Manipulation (SC08)
+   - Unchecked Return Values (SC09)
+   - Short Address Attack (SC10)
+
+2. **Supports multiple output formats**:
+   - Human-readable text reports
+   - JSON format for programmatic processing
+
+3. **Can scan**:
+   - Individual `.sol` files
+   - Entire directories (recursively finds all `.sol` files)
+
+The tool will analyze your Solidity code and provide detailed security findings with severity levels, line numbers, code snippets, and remediation recommendations.
+
+
+Build a separate python file for this update, there has been some moves for the 2025 framework for OWASP smartcontracts
+
+v1.1 update changes:
+
+OWASP Top 10 2025
+SC01:2025 - Access Control Vulnerabilities
+SC02:2025 - Price Oracle Manipulation
+SC03:2025 - Logic Errors
+SC04:2025 - Lack of Input Validation
+SC05:2025 - Reentrancy Attacks
+SC06:2025 - Unchecked External Calls
+SC07:2025 - Flash Loan Attacks
+SC08:2025 - Integer Overflow and Underflow
+SC09:2025 - Insecure Randomness
+SC10:2025 - Denial of Service (DoS) Attacks
+
+New Features in update v1.1 "Solitude Snake"
+Enhanced Parser: Added support for contracts, events, and structs
+Advanced Detection: Context-aware analysis for flash loans and price oracles
+2025 Framework Compliance: All rules updated to match OWASP 2025 priorities
+Improved Severity Mapping: Updated severity levels based on 2025 framework
+Better Reporting: Enhanced reports with framework version information
+The tool now specifically targets the most critical vulnerabilities identified in the 2025 framework, with particular emphasis on access control, price oracle manipulation, and flash loan attacks that have become more prevalent in recent years.
+
+# Basic usage - same as v1.0
+python SAST_snake_v1_1.py CollateralGuard.sol
+
+# Scan with verbose output
+python SAST_snake_v1_1.py . --verbose
+
+# Generate JSON report with 2025 framework
+python SAST_snake_v1_1.py . --format json --output owasp_2025_report.json
+
+# Check version
+python SAST_snake_v1_1.py --version
